@@ -1,8 +1,8 @@
 const thebox = document.querySelector<HTMLDivElement>(".box");
 const movememnt = document.querySelector<HTMLButtonElement>(".move");
-const status = document.getElementById<HTMLParagraphElement>("status");
+const update = document.querySelector<HTMLParagraphElement>("#status");
 
-if (thebox && movememnt && status) {
+if (thebox && movememnt && update) {
     movememnt.innerText = "click to transform me!";
     movememnt.addEventListener("click", () => {
         thebox.style.transform = "translate(80px, 170px) scale(3.2)";
@@ -13,6 +13,6 @@ if (thebox && movememnt && status) {
         movememnt.style.borderColor = "crimson";
         movememnt.style.color = "crimson";
 
-        status.innerHTML = "i have been transformed!";
+        update.innerHTML = "i have been transformed!";
     })
 }
